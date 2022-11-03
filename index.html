@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///D:/projects/lung/templates/project.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+html{
+    text-rendering: optimizeLegibility;
+    color:#555;
+}
+
+
+.row {
+    max-width:1140px;
+    margin:0 auto;
+}
+
+
+.container {
+    margin-top: 40px;
+}
+
+header {
+
+     background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(61, 80, 53, 0.7)),url('https://res.cloudinary.com/dtpgi0zck/image/upload/s--KuHP6sEY--/c_fill,h_580,w_860/v1/EducationHub/photos/crops-growing-in-thailand.jpg');
+
+ background-position:top;
+    background-size: cover;
+    background-attachment:fixed;
+    height:100vh;
+}
+
+.hero-text {
+    font-family:"Lato";
+    position:absolute;
+    width:1140px;
+    top:50%;
+    left:50%;
+  transform:translate(-50%,-50%);
+}
+
+
+
+.text-hero {
+    margin-top:0;
+    color:#FFF;
+    font-family:'Lato:ital';
+    font-size:240%;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+
+.btn{
+    font-family:'lato:ital';
+    display:inline-block;
+    padding:17px 34px;
+    border:solid 2px #fff;
+    font-weight:400;
+    text-decoration:none;
+    background-color:#9b59b6;
+    color:#fff;
+    border-radius:200px;
+    font-size:20px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover,
+.btn:active{
+        font-size:20px;
+ display:inline-block;
+    padding:17px 34px;
+    border:solid 2px #fff;
+    font-weight:300;
+    text-decoration:none;
+    background-color:#4834d4;
+    color:#fff;
+    border-radius:200px;
+}
+
+
+
+
+input[type="reset"] {
+    display: none;
+}  
+
+    .custom-reset-upload{
+          border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+background-color:#9b59b6;
+    color:white;
+    border:solid 2px white;
+    border-radius: 200px;
+    padding:10px 30px;
+    }
+    .file{
+        background-color:white;
+        width:550px;
+        outline:none;
+        border-radius: 200px;
+        margin-top: 25px;
+    }
+    ::-webkit-file-upload-button{
+    border: 1px solid #ccc;
+    display: inline-block;
+    cursor: pointer;
+background-color:#9b59b6;
+    color:white;
+         font-family:'lato:ital';
+        font-size: 20px;
+    border:solid 2px white;
+    border-radius: 200px;
+    padding:17px 34px;
+    }
+.title1{
+color:white;
+ font-family:'Lato:ital';
+    float: left;
+padding-top:10px;
+padding-left: 20px;
+    font-size:200%;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    }
+    .img{
+height: 90px;
+    width: 90px;
+    float: left;}  
+    .upic{
+margin-top: 20px;}
+    .l{
+color: white;
+    font-size: 25px;
+    }
+</style>
+<script src="./project_files/jquery.min.js.download"></script>
+     <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="./project_files/css2" rel="stylesheet">
+     <title> 
+     Fertilizer Recommendation
+    </title>
+  </head>
+   <body>
+       <header>
+           <h1 class="title1">Fertilizer Recommendation System</h1> 
+    
+           <div class="hero-text">
+        <h1 class="text-hero">
+          Submit  Details Here...
+        </h1>
+               <br><br>
+               <form id="upload-file" method="post" action="/predict" enctype="multipart/form-data">
+                   <h2 class="text-hero">Choose crop</h2>
+                   
+                   <input type="radio" id="fruits" name="Choose" value="fruits">
+                <label for="fruits" class='l'>Fruits</label><br>
+                  <input type="radio" id="vegtables" name="Choose" value="vegtables">
+                      <label for="vegtables" class='l'>Vegtables</label><br>
+                   
+            <input type="file" class="file" id="file1" name="fileq" onchange="loadFile(event)" accept=".png,.jpg,.jpeg">
+
+            <input type="submit" class="btn">
+    <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+<p><label for="file" style="cursor: pointer;"></label></p>
+<p><img id="output" class="upic" width="200"></p>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+
+               </form>
+               
+        </div>  
+       </header>
+       
+     
+
+
+</body></html>

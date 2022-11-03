@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<style>
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+html{
+    text-rendering: optimizeLegibility;
+    color:#555;
+}
+
+
+.row {
+    max-width:1140px;
+    margin:0 auto;
+}
+
+
+.container {
+    margin-top: 40px;
+}
+
+header {
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(61, 80, 53, 0.7)),url('https://res.cloudinary.com/dtpgi0zck/image/upload/s--KuHP6sEY--/c_fill,h_580,w_860/v1/EducationHub/photos/crops-growing-in-thailand.jpg');
+
+ background-position:top;
+    background-size: cover;
+    background-attachment:fixed;
+    height:100vh;
+}
+
+.hero-text {
+    font-family:"Lato";
+    position:absolute;
+    width:1140px;
+    top:50%;
+    left:50%;
+  transform:translate(-50%,-50%);
+}
+
+
+
+.text-hero {
+    margin-top:0;
+    color:#FFF;
+    font-family:'Lato:ital';
+    font-size:240%;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    
+}
+
+
+.btn{
+    font-family:'lato:ital';
+    display:inline-block;
+    padding:17px 35px;
+    border:solid 2px #fff;
+    font-weight:300;
+    text-decoration:none;
+    background-color:#9b59b6;
+    color:#fff;
+    border-radius:200px;
+    font-size: 17px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover,
+.btn:active{
+    
+ display:inline-block;
+    padding:17px 35px;
+    border:solid 2px #fff;
+    font-weight:300;
+    text-decoration:none;
+    background-color:#4834d4;
+    color:#fff;
+    font-size: 17px;
+    border-radius:200px;
+}
+
+
+
+input[type="reset"] {
+    display: none;
+}  
+
+    .custom-reset-upload{
+          border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color:#9b59b6;
+    color:white;
+    border:solid 2px white;
+    border-radius: 200px;
+    padding:10px 30px;
+    }
+    .file{
+        background-color:white;
+        width:400px;
+        outline:none;
+        border-radius: 200px;
+    }
+    ::-webkit-file-upload-button{
+                  border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color:#9b59b6;
+    color:white;
+    border:solid 2px white;
+    border-radius: 200px;
+    padding:10px 30px;
+    }
+    .result{
+        color:white;
+       font-family:'lato:ital';
+        font-size: 40px;
+    }
+.title1{
+color:white;
+ font-family:'Lato:ital';
+    float: left;
+padding-top:10px;
+padding-left: 20px;
+    font-size:200%;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    }
+    .img{
+height: 90px;
+    width: 90px;
+    float: left;}  
+</style>
+ <head>
+     <link rel="stylesheet" type='text/css' href='grid.css'>
+     <link rel="stylesheet" type='text/css' href='normalize.css'>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+     <title> 
+     Fertilizer Recommendation
+    </title>
+  </head>
+   <body>
+       <header>
+           
+           <h1 class="title1">Fertilizer Recommendation System</h1> 
+           <div class='hero-text'>
+               <form action='/home'>
+                   <input type='submit' class='btn' value='Reset'> 
+               </form>
+               <br><br>
+               <h2 class='result'>{{data}}</h2>
+        </div> 
+           
+       </header>
+       
+    
+     </body>
+</html>
